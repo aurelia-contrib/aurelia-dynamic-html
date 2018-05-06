@@ -41,7 +41,14 @@
     "ghpages": "cross-env ./node_modules/.bin/nps ghpages",
     "ghpages-setup": "cross-env ./node_modules/.bin/nps ghpages.setup"
   },
-  "dependencies": {},
+  "dependencies": {
+    "aurelia-binding": "^1.0.0",
+    "aurelia-dependency-injection": "^1.0.0",
+    "aurelia-logging": "^1.0.0",
+    "aurelia-task-queue": "^1.0.0",
+    "aurelia-templating": "^1.0.0",
+    "aurelia-pal": "^1.0.0"
+  },
   "devDependencies": {
     "@types/bluebird-global": "^3.5.5",
     "@types/extract-text-webpack-plugin": "^3.0.2",
