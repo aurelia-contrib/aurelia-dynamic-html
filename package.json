@@ -1,6 +1,6 @@
 {
   "name": "aurelia-dynamic-html",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Aurelia custom element that takes (server- or client side) generated html and compiles it into a fully functional Aurelia View",
   "keywords": [
     "aurelia",
@@ -59,7 +59,7 @@
     "@types/webpack": "^4.1.3",
     "@types/webpack-env": "^1.13.6",
     "aurelia-bootstrapper": "^2.2.0",
-    "aurelia-dynamic-html": "^0.2.1",
+    "aurelia-dynamic-html": "^0.2.2",
     "aurelia-framework": "^1.2.0",
     "aurelia-pal-browser": "^1.7.0",
     "aurelia-polyfills": "^1.3.0",
