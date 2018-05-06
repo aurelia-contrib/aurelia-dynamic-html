@@ -1,25 +1,28 @@
 {
-  "name": "aurelia-skeleton-plugin-ts-webpack",
+  "name": "aurelia-dynamic-html",
   "version": "0.1.2",
-  "description": "A skeleton project with basic configuration for developing an Aurelia plugin in TypeScript that utilizes webpack",
+  "description": "Aurelia custom element that takes (server- or client side) generated html and compiles it into a fully functional Aurelia View",
   "keywords": [
     "aurelia",
-    "skeleton",
-    "plugin",
-    "typescript",
-    "webpack"
+    "dynamic",
+    "generate",
+    "html",
+    "runtime",
+    "composition",
+    "enhance",
+    "compile"
   ],
-  "homepage": "https://github.com/aurelia-contrib/aurelia-skeleton-plugin-ts-webpack",
+  "homepage": "https://github.com/aurelia-contrib/aurelia-dynamic-html",
   "bugs": {
-    "url": "https://github.com/aurelia-contrib/aurelia-skeleton-plugin-ts-webpack/issues"
+    "url": "https://github.com/aurelia-contrib/aurelia-dynamic-html/issues"
   },
   "license": "MIT",
   "author": "Fred Kleuver <fred@avurad.nl>",
-  "main": "dist/commonjs/aurelia-skeleton-plugin-ts-webpack.js",
-  "typings": "dist/commonjs/aurelia-skeleton-plugin-ts-webpack.d.ts",
+  "main": "dist/commonjs/aurelia-dynamic-html.js",
+  "typings": "dist/commonjs/aurelia-dynamic-html.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aurelia-contrib/aurelia-skeleton-plugin-ts-webpack"
+    "url": "https://github.com/aurelia-contrib/aurelia-dynamic-html"
   },
   "scripts": {
     "lint": "cross-env ./node_modules/.bin/nps lint",
@@ -107,9 +110,9 @@
     "import": {
       "dependencies": [
         {
-          "name": "aurelia-skeleton-plugin-ts-webpack",
-          "path": "../node_modules/aurelia-skeleton-plugin-ts-webpack/dist/amd",
-          "main": "aurelia-skeleton-plugin-ts-webpack"
+          "name": "aurelia-dynamic-html",
+          "path": "../node_modules/aurelia-dynamic-html/dist/amd",
+          "main": "aurelia-dynamic-html"
         }
       ]
     }

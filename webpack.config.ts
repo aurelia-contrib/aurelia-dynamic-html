@@ -9,7 +9,7 @@ import * as webpack from "webpack";
 
 const pkg = JSON.parse(readFileSync("package.json", "utf-8"));
 
-const title = "Webpack TypeScript Plugin Skeleton";
+const title = "Aurelia Dynamic HTML Plugin";
 interface IEnv {
   server?: boolean;
   production?: boolean;
