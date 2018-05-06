@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/aurelia-contrib/aurelia-dynamic-html/compare/v0.2.0...v0.2.1) (2018-05-06)
+
+
+### Bug Fixes
+
+* split out interfaces in separate file and export everything via index ([dd80902](https://github.com/aurelia-contrib/aurelia-dynamic-html/commit/dd80902))
+
+
+
 <a name="0.2.0"></a>
 # 0.2.0 (2018-05-06)
 
