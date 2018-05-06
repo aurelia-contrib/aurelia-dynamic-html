@@ -3,17 +3,9 @@ import { Container } from "aurelia-dependency-injection";
 import { getLogger } from "aurelia-logging";
 import { TaskQueue } from "aurelia-task-queue";
 import { bindable, customElement, inlineView, ViewCompiler, ViewResources, ViewSlot } from "aurelia-templating";
+import { IBindingContext, IOverrideContext } from "./interfaces";
 
 const logger = getLogger("dynamic-html");
-
-export interface IBindingContext {
-  [key: string]: any;
-}
-
-export interface IOverrideContext {
-  parentOverrideContext: IOverrideContext;
-  bindingContext: IBindingContext;
-}
 
 @customElement("dynamic-html")
 @inlineView("<template><div></div></template>")
