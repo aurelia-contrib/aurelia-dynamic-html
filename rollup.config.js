@@ -25,8 +25,12 @@ function output(config, format, opts = {}) {
       })
     ],
     external: [
-      // add any peerDependencies here that you don't want included in the bundle, for example:
-      //"aurelia-framework"
+      "aurelia-binding",
+      "aurelia-dependency-injection",
+      "aurelia-logging",
+      "aurelia-pal",
+      "aurelia-task-queue",
+      "aurelia-templating"
     ]
   };
 }

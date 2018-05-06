@@ -41,8 +41,7 @@
     "ghpages": "cross-env ./node_modules/.bin/nps ghpages",
     "ghpages-setup": "cross-env ./node_modules/.bin/nps ghpages.setup"
   },
-  "dependencies": {},
-  "peerDependencies": {
+  "dependencies": {
     "aurelia-binding": "^1.0.0",
     "aurelia-dependency-injection": "^1.0.0",
     "aurelia-logging": "^1.0.0",
@@ -60,6 +59,7 @@
     "@types/webpack": "^4.1.3",
     "@types/webpack-env": "^1.13.6",
     "aurelia-bootstrapper": "^2.2.0",
+    "aurelia-dynamic-html": "^0.2.1",
     "aurelia-framework": "^1.2.0",
     "aurelia-pal-browser": "^1.7.0",
     "aurelia-polyfills": "^1.3.0",
@@ -114,15 +114,22 @@
     "directories": {
       "dist": "dist/amd"
     },
+    "dependencies": {
+      "aurelia-binding": "^1.0.0",
+      "aurelia-dependency-injection": "^1.0.0",
+      "aurelia-logging": "^1.0.0",
+      "aurelia-pal": "^1.0.0",
+      "aurelia-task-queue": "^1.0.0",
+      "aurelia-templating": "^1.0.0"
+    },
     "peerDependencies": {
       "aurelia-binding": "^1.0.0",
       "aurelia-dependency-injection": "^1.0.0",
       "aurelia-logging": "^1.0.0",
+      "aurelia-pal": "^1.0.0",
       "aurelia-task-queue": "^1.0.0",
-      "aurelia-templating": "^1.0.0",
-      "aurelia-pal": "^1.0.0"
-    },
-    "dependencies": {}
+      "aurelia-templating": "^1.0.0"
+    }
   },
   "aurelia": {
     "import": {
