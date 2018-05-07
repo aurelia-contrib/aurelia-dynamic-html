@@ -1,6 +1,6 @@
 {
   "name": "aurelia-dynamic-html",
-  "version": "0.2.5",
+  "version": "0.3.0",
   "description": "Aurelia custom element that takes (server- or client side) generated html and compiles it into a fully functional Aurelia View",
   "keywords": [
     "aurelia",

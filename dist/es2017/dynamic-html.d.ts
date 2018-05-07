@@ -29,4 +29,5 @@ export declare class DynamicHtml {
     protected tryCompile(): void;
     protected cleanUp(): void;
     protected compile(message?: string): void;
+    protected dispatchCompiledEvent(): void;
 }
