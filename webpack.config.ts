@@ -1,9 +1,9 @@
 // tslint:disable:no-implicit-dependencies
 // tslint:disable:import-name
 import { AureliaPlugin, ModuleDependenciesPlugin } from "aurelia-webpack-plugin";
-import ExtractTextPlugin from "extract-text-webpack-plugin";
 import { readFileSync } from "fs";
 import HtmlWebpackPlugin from "html-webpack-plugin";
+import MonacoWebpackPlugin from "monaco-editor-webpack-plugin";
 import * as path from "path";
 import * as webpack from "webpack";
 
@@ -19,16 +19,14 @@ const devBaseUrl: string = "/";
 const prodBaseUrl: string = `/${pkg.name}/`;
 export default (env: IEnv = {}): webpack.Configuration => {
   const alias = {
-    "bluebird": path.resolve(__dirname, "node_modules/bluebird/js/browser/bluebird.core"),
-    "@src": path.resolve(__dirname, "src")
+    "bluebird": path.resolve(__dirname, "node_modules/bluebird/js/browser/bluebird.core")
   };
-  alias[pkg.name] = path.resolve(__dirname, `src/${pkg.name}.ts`);
 
   return {
     mode: "development",
     resolve: {
       extensions: [".ts", ".js"],
-      modules: ["src", "demo", "node_modules"],
+      modules: [path.resolve(__dirname, "src"), path.resolve(__dirname, "demo"), "node_modules"],
       alias
     },
     entry: {
@@ -38,21 +36,19 @@ export default (env: IEnv = {}): webpack.Configuration => {
     output: {
       path: path.resolve(__dirname),
       publicPath: env.production ? prodBaseUrl : devBaseUrl,
-      filename: "[name].[hash].bundle.js",
-      sourceMapFilename: "[name].[hash].bundle.map"
+      filename: "[name].bundle.js"
     },
     devtool: "cheap-module-eval-source-map",
     devServer: {
-      historyApiFallback: true
+      historyApiFallback: true,
+      lazy: false,
+      open: true
     },
     module: {
       rules: [
         {
           test: /\.css$/,
-          use: ExtractTextPlugin.extract({
-            fallback: "style-loader",
-            use: [{ loader: "css-loader" }]
-          }),
+          use: [{ loader: "style-loader" }, { loader: "css-loader" }],
           issuer: [{ not: [{ test: /\.html$/i }] }]
         },
         {
@@ -79,13 +75,6 @@ export default (env: IEnv = {}): webpack.Configuration => {
       ]
     },
     plugins: [
-      new AureliaPlugin(),
-      new webpack.ProvidePlugin({
-        Promise: "bluebird"
-      }),
-      new ModuleDependenciesPlugin({
-        "aurelia-testing": ["./compile-spy", "./view-spy"]
-      }),
       new HtmlWebpackPlugin({
         template: "demo/index.ejs",
         metadata: {
@@ -93,7 +82,16 @@ export default (env: IEnv = {}): webpack.Configuration => {
           server: env.server,
           baseUrl: env.production ? prodBaseUrl : devBaseUrl
         }
-      })
+      }),
+      new AureliaPlugin(),
+      new webpack.ProvidePlugin({
+        Promise: "bluebird"
+      }),
+      new MonacoWebpackPlugin(),
+      new webpack.IgnorePlugin(
+        /^((fs)|(path)|(os)|(crypto)|(source-map-support))$/,
+        /vs(\/|\\)language(\/|\\)typescript(\/|\\)lib/
+      )
     ]
   };
 };

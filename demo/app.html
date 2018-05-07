@@ -1,4 +1,15 @@
 <template>
   <require from="./app.css"></require>
-  ${message}
+  <div class="area-tleft content-area">
+    <monaco-editor options.bind="{language: 'html'}" code.bind="html">
+    </monaco-editor>
+  </div>
+  <div class="area-bleft content-area">
+    <monaco-editor options.bind="{language: 'javascript'}" code.bind="jsRaw">
+    </monaco-editor>
+  </div>
+  <div class="area-right content-area">
+    <dynamic-html html.bind="html" context.bind="context" render-errors=true>
+    </dynamic-html>
+  </div>
 </template>
