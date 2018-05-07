@@ -87,7 +87,9 @@ export default (env: IEnv = {}): webpack.Configuration => {
       new webpack.ProvidePlugin({
         Promise: "bluebird"
       }),
-      new MonacoWebpackPlugin(),
+      new MonacoWebpackPlugin({
+        languages: ["typescript", "html"]
+      }),
       new webpack.IgnorePlugin(
         /^((fs)|(path)|(os)|(crypto)|(source-map-support))$/,
         /vs(\/|\\)language(\/|\\)typescript(\/|\\)lib/
