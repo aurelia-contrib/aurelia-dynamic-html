@@ -150,9 +150,9 @@ module.exports = {
       default: series(
         "git checkout gh-pages",
         "git merge master --no-edit",
-        rimraf("*.bundle.js"),
+        rimraf("*.bundle.js *.worker.js"),
         package("nps build.demo.production"),
-        "git add index.html *.bundle.js",
+        "git add index.html *.bundle.js *.worker.js",
         'git commit -m "doc(demo): build demo"',
         "git push",
         "git checkout master"
