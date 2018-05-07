@@ -3,7 +3,8 @@ import { Container } from "aurelia-dependency-injection";
 import { getLogger } from "aurelia-logging";
 import { TaskQueue } from "aurelia-task-queue";
 import { bindable, customElement, inlineView, ViewCompiler, ViewResources, ViewSlot } from "aurelia-templating";
-import { IBindingContext, IOverrideContext } from "./interfaces";
+import { IBindingContext, IOverrideContext } from "../../../src/interfaces";
+
 
 const logger = getLogger("dynamic-html");
 

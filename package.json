@@ -1,6 +1,6 @@
 {
   "name": "aurelia-dynamic-html",
-  "version": "0.1.2",
+  "version": "0.2.4",
   "description": "Aurelia custom element that takes (server- or client side) generated html and compiles it into a fully functional Aurelia View",
   "keywords": [
     "aurelia",
@@ -41,7 +41,14 @@
     "ghpages": "cross-env ./node_modules/.bin/nps ghpages",
     "ghpages-setup": "cross-env ./node_modules/.bin/nps ghpages.setup"
   },
-  "dependencies": {},
+  "dependencies": {
+    "aurelia-binding": "^1.0.0",
+    "aurelia-dependency-injection": "^1.0.0",
+    "aurelia-logging": "^1.0.0",
+    "aurelia-pal": "^1.0.0",
+    "aurelia-task-queue": "^1.0.0",
+    "aurelia-templating": "^1.0.0"
+  },
   "devDependencies": {
     "@types/bluebird-global": "^3.5.5",
     "@types/extract-text-webpack-plugin": "^3.0.2",
@@ -50,6 +57,7 @@
     "@types/karma": "^1.7.3",
     "@types/node": "^9.6.4",
     "@types/webpack": "^4.1.3",
+    "@types/webpack-env": "^1.13.6",
     "aurelia-bootstrapper": "^2.2.0",
     "aurelia-framework": "^1.2.0",
     "aurelia-pal-browser": "^1.7.0",
@@ -77,6 +85,8 @@
     "karma-mocha-reporter": "^2.2.5",
     "karma-sourcemap-loader": "^0.3.7",
     "karma-webpack": "^3.0.0",
+    "monaco-editor": "^0.12.0",
+    "monaco-editor-webpack-plugin": "^1.1.0",
     "nps": "^5.9.0",
     "nps-utils": "^1.5.0",
     "rollup": "^0.57.1",
@@ -103,8 +113,22 @@
     "directories": {
       "dist": "dist/amd"
     },
-    "peerDependencies": {},
-    "dependencies": {}
+    "dependencies": {
+      "aurelia-binding": "^1.0.0",
+      "aurelia-dependency-injection": "^1.0.0",
+      "aurelia-logging": "^1.0.0",
+      "aurelia-pal": "^1.0.0",
+      "aurelia-task-queue": "^1.0.0",
+      "aurelia-templating": "^1.0.0"
+    },
+    "peerDependencies": {
+      "aurelia-binding": "^1.0.0",
+      "aurelia-dependency-injection": "^1.0.0",
+      "aurelia-logging": "^1.0.0",
+      "aurelia-pal": "^1.0.0",
+      "aurelia-task-queue": "^1.0.0",
+      "aurelia-templating": "^1.0.0"
+    }
   },
   "aurelia": {
     "import": {

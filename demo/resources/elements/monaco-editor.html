@@ -1,0 +1,8 @@
+<template>
+  <require from="./monaco-editor.css"></require>
+  <div class="monaco-editor-host" ref="editorHost">
+    <div if.bind="!editor" class="ui active inverted dimmer">
+        <div class="ui huge loader"></div>
+    </div>
+  </div>
+</template>

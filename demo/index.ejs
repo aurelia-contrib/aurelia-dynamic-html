@@ -16,16 +16,17 @@
   <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
   <meta http-equiv="pragma" content="no-cache" />
 
-  <!-- statically include semantic-ui from cdn for a nice basic set of styling - feel free to remove or replace with anything you like -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.14/semantic.min.css" />
   <!-- imported CSS are concatenated and added automatically -->
 </head>
 
-<body aurelia-app="main">
-  <% if (htmlWebpackPlugin.options.metadata.server) { %>
-    <!-- Webpack Dev Server reload -->
-    <script src="/webpack-dev-server.js"></script>
-  <% } %>
+<body>
+  <div aurelia-app="main">
+    <% if (htmlWebpackPlugin.options.metadata.server) { %>
+      <!-- Webpack Dev Server reload -->
+      <script src="/webpack-dev-server.js"></script>
+      <% } %>
+  </div>
 </body>
 
 </html>

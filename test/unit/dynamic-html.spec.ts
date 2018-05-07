@@ -3,7 +3,8 @@ import { Container } from "aurelia-dependency-injection";
 import { DOM } from "aurelia-pal";
 import { TaskQueue } from "aurelia-task-queue";
 import { BindingLanguage, ViewCompiler, ViewResources, ViewSlot } from "aurelia-templating";
-import { DynamicHtml, IBindingContext, IOverrideContext } from "../../src/dynamic-html";
+import { DynamicHtml } from "../../src/dynamic-html";
+import { IBindingContext, IOverrideContext } from "../../src/interfaces";
 import { getAllProperties, getAllPropertyNames } from "./util";
 
 // tslint:disable:mocha-no-side-effect-code
@@ -326,7 +327,7 @@ describe("htmlChanged()", () => {
                 expect(tryCompileSpy.calls.count()).toBe(0, "tryCompile() should NOT have been called");
               }
               done();
-            }, 0);
+            },         0);
           });
         }
       }
@@ -392,7 +393,7 @@ describe("contextChanged()", () => {
                 expect(tryCompileSpy.calls.count()).toBe(0, "tryCompile() should NOT have been called");
               }
               done();
-            }, 0);
+            },         0);
           });
         }
       }
@@ -436,7 +437,7 @@ describe("tryCompile()", () => {
             expect(cleanUpSpy.calls.count()).toBe(0, "cleanUp() should NOT have been called");
           }
           done();
-        }, 0);
+        },         0);
       });
     }
   }
@@ -500,7 +501,7 @@ describe("compile()", () => {
     setTimeout(() => {
       expect(cleanUpSpy.calls.count()).toBe(1);
       done();
-    }, 0);
+    },         0);
   });
 
   it("should NOT call cleanUp() when isCleanedUp is true", done => {
@@ -514,7 +515,7 @@ describe("compile()", () => {
     setTimeout(() => {
       expect(cleanUpSpy.calls.count()).toBe(0);
       done();
-    }, 0);
+    },         0);
   });
 
   it("should always set isCleanedUp to false if html has a value", () => {

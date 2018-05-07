@@ -4,6 +4,7 @@ import { PLATFORM } from "aurelia-pal";
 
 export function configure(config: FrameworkConfiguration): void {
   config.globalResources([
-    //PLATFORM.moduleName("")
+    PLATFORM.moduleName("resources/elements/monaco-editor"),
+    PLATFORM.moduleName("resources/elements/dynamic-html")
   ]);
 }

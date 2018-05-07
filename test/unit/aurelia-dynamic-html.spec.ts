@@ -11,6 +11,6 @@ describe("configure()", () => {
 
     configure(config);
 
-    expect(moduleName).toEqual(["./dynamic-html"]);
+    expect(moduleName).toEqual("./dynamic-html");
   });
 });
