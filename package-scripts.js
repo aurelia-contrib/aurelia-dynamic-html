@@ -99,7 +99,7 @@ module.exports = {
         }
       },
       dist: {
-        default: "nps build.dist.rollup",
+        default: "nps build.dist.tsc",
         before: series.nps("lint", "build.dist.clean"),
         clean: rimraf("dist"),
         rollup: {
