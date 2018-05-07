@@ -172,6 +172,17 @@ export class DynamicHtml {
     slot.bind(this.bindingContext as IBindingContext, this.overrideContext as IOverrideContext);
     slot.attached();
 
+    this.dispatchCompiledEvent();
+
     this.isCompiled = true;
+  }
+
+  protected dispatchCompiledEvent(): void {
+    const event = new CustomEvent("compiled", {
+      cancelable: true,
+      bubbles: true,
+      detail: this
+    });
+    this.el.dispatchEvent(event);
   }
 }

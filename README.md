@@ -2,6 +2,8 @@
 
 Aurelia custom element that takes (server- or client side) generated html and compiles it into a fully functional Aurelia View.
 
+View [LIVE DEMO](https://aurelia-contrib.github.io/aurelia-dynamic-html/)
+
 ## Installation
 Install the npm dependency via
 

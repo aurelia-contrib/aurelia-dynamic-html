@@ -173,7 +173,16 @@ System.register(['aurelia-binding', 'aurelia-dependency-injection', 'aurelia-log
                     slot.add(view);
                     slot.bind(this.bindingContext, this.overrideContext);
                     slot.attached();
+                    this.dispatchCompiledEvent();
                     this.isCompiled = true;
+                }
+                dispatchCompiledEvent() {
+                    const event = new CustomEvent("compiled", {
+                        cancelable: true,
+                        bubbles: true,
+                        detail: this
+                    });
+                    this.el.dispatchEvent(event);
                 }
             });
             __decorate([

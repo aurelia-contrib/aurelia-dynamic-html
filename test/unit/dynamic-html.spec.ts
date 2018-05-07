@@ -41,6 +41,7 @@ class SutProps {
   public tryCompile(): void {}
   public cleanUp(): void {}
   public compile(_: any): void {}
+  public dispatchCompiledEvent(_: any): void {}
 }
 
 describe("SutProps", () => {
